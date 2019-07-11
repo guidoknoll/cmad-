@@ -1,4 +1,4 @@
-# Cmad-
+# Cmad- [![DOI](https://zenodo.org/badge/196399973.svg)](https://zenodo.org/badge/latestdoi/196399973)
 
 Prototype for evaluation of multiple flexibilization approaches of research documentation.
 
@@ -49,4 +49,4 @@ The export contains these values:
 
 # License
 
-Copyright © 2019 Guido Knoll | MIT license
+Copyright © 2019 Guido Knoll | Apache License
