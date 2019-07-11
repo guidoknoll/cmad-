@@ -1,0 +1,25 @@
+<div class="project-container" *ngIf="noExperimentSelected()">
+
+  <mat-nav-list>
+    <!-- <h3 mat-subheader>Projects</h3> -->
+    <h3 mat-subheader>Projekte</h3>
+    <a mat-list-item *ngFor="let project of projects" [routerLink]="[project.id, 'experiment']">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line *ngIf="project.name">{{ project.name }}</h4>
+      <h4 mat-line *ngIf="!project.name && isEn"><i>Untitled Project</i></h4>
+      <h4 mat-line *ngIf="!project.name && isDe"><i>Unbenanntes Projekt</i></h4>
+      <p mat-line *ngIf="isEn"> created by {{ project.creator }} <span *ngIf="project.creationDate"> on {{ project.creationDate | date }}</span>, <span *ngIf="project.startDate && project.endDate"> from {{ project.startDate | date }} to {{ project.endDate | date }}</span> </p>
+      <p mat-line *ngIf="isDe"> Erstellt von {{ project.creator }} <span *ngIf="project.creationDate"> am {{ project.creationDate | date }}</span>, <span *ngIf="project.startDate && project.endDate"> von {{ project.startDate | date }} bis {{ project.endDate | date }}</span> </p>
+    </a>
+  </mat-nav-list> 
+
+  <h2 class="empty-state" *ngIf="projects && projects.length === 0 && isEn">No projects found</h2>
+  <h2 class="empty-state" *ngIf="projects && projects.length === 0 && isDe">Keine Projekte gefunden</h2>
+  
+  <button class="menu-trigger" mat-fab (click)="createProject()">
+    <mat-icon>add</mat-icon>
+  </button>
+
+</div>
+
+<router-outlet></router-outlet>

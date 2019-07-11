@@ -1,0 +1,1815 @@
+{
+  "mode": {
+    "mode": "sub"
+  },
+  "logs": [
+    {
+      "message": "Projekt Test 3 geladen.",
+      "mode": "sub",
+      "cause": "load",
+      "timestamp": 1561643879,
+      "id": 1
+    },
+    {
+      "message": "Setze bearbeitungs Modus auf true.",
+      "mode": "sub",
+      "cause": "viewMode",
+      "timestamp": 1561643885,
+      "id": 2
+    },
+    {
+      "message": "Schritt \"Plattenherstellung\" geöffnet.",
+      "mode": "sub",
+      "cause": "openStep",
+      "timestamp": 1561643892,
+      "id": 3
+    },
+    {
+      "message": "Schritt \"Aufleimerapplikation\" geöffnet.",
+      "mode": "sub",
+      "cause": "openStep",
+      "timestamp": 1561643926,
+      "id": 4
+    },
+    {
+      "message": "Projekt Test 3 geladen.",
+      "mode": "sub",
+      "cause": "load",
+      "timestamp": 1561821636,
+      "id": 5
+    },
+    {
+      "message": "Setze bearbeitungs Modus auf true.",
+      "mode": "sub",
+      "cause": "viewMode",
+      "timestamp": 1561821639,
+      "id": 6
+    },
+    {
+      "message": "Step Prüfkörperzuschnitt einblenden.",
+      "mode": "sub",
+      "cause": "visibility",
+      "timestamp": 1561821662,
+      "id": 7
+    },
+    {
+      "message": "Schritt \"Plattenherstellung\" geöffnet.",
+      "mode": "sub",
+      "cause": "openStep",
+      "timestamp": 1561821713,
+      "id": 8
+    },
+    {
+      "message": "Selektion des Attributes \"Fasermaterial\" auf \"undefined\" geändert.",
+      "mode": "sub",
+      "cause": "data",
+      "timestamp": 1561821716,
+      "id": 9
+    },
+    {
+      "message": "Selektion des Attributes \"Fasermaterial\" auf \"undefined\" geändert.",
+      "mode": "sub",
+      "cause": "data",
+      "timestamp": 1561821716,
+      "id": 10
+    },
+    {
+      "message": "Schritt \"Aufleimerapplikation\" geöffnet.",
+      "mode": "sub",
+      "cause": "openStep",
+      "timestamp": 1561821719,
+      "id": 11
+    },
+    {
+      "message": "Attribut \"Temperaturbeständig bis\" fokussiert.",
+      "mode": "sub",
+      "cause": "focus",
+      "timestamp": 1561821724,
+      "id": 12
+    },
+    {
+      "message": "Attribut \"Temperaturbeständig bis\" fokus verlassen. Aktueller Wert: ",
+      "mode": "sub",
+      "cause": "data",
+      "timestamp": 1561821726,
+      "id": 13
+    },
+    {
+      "message": "Projekt Test 3 speichern.",
+      "mode": "sub",
+      "cause": "save",
+      "timestamp": 1561821735,
+      "id": 14
+    },
+    {
+      "message": "Projekt Test 3 gespeichert. JSON:",
+      "mode": "sub",
+      "cause": "saveData",
+      "timestamp": 1561821735,
+      "data": {
+        "id": 2,
+        "name": "Test 3",
+        "experimentName": "Prüfkörperherstellung",
+        "creator": "Testina",
+        "creationDate": "2019-06-26T12:30:05.047Z",
+        "startDate": null,
+        "endDate": null,
+        "productionSteps": [
+          {
+            "id": 1,
+            "name": "Aufleimerapplikation",
+            "position": null,
+            "fields": [
+              {
+                "id": 1,
+                "label": "Standard",
+                "type": "select",
+                "options": [
+                  "DIN EN 2565:2013-05",
+                  "DIN 65672:2009-06",
+                  "DIN 65671:1992-12",
+                  "Norm DIN EN 12576:1998-09",
+                  "DIN EN ISO 291",
+                  "DIN EN 527",
+                  "DIN EN ISO 527"
+                ],
+                "value": "DIN EN ISO 291",
+                "secondValue": null,
+                "active": true,
+                "checked": false,
+                "position": 0
+              },
+              {
+                "id": 2,
+                "label": "Beschriftung",
+                "type": "input",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 1
+              },
+              {
+                "id": 3,
+                "label": "Verwendetes Gerät",
+                "type": "select",
+                "options": [
+                  "Kreissäge",
+                  "Zwick Z250",
+                  "Instron",
+                  "Bandsäge",
+                  "Ofen"
+                ],
+                "value": "Zwick Z250",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 4
+              },
+              {
+                "id": 4,
+                "label": "Temperaturbeständig bis",
+                "type": "input",
+                "unit": "°C",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 2
+              },
+              {
+                "id": 5,
+                "label": "Klebstoff",
+                "type": "select",
+                "options": [
+                  "Harz",
+                  "Härter",
+                  "Füllstoff"
+                ],
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 5
+              },
+              {
+                "id": 6,
+                "label": "Klebstoff Harz-Mischverhältnis",
+                "type": "double-input",
+                "unit": "%",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 6
+              },
+              {
+                "id": 7,
+                "label": "Apllikationsprüfung",
+                "type": "select",
+                "options": [
+                  "1x Stichprobe/Plate",
+                  "2x Stichprobe/Plate",
+                  "4x Stichprobe/Plate"
+                ],
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 6
+              },
+              {
+                "id": 8,
+                "label": "Verarbeitungszeit",
+                "type": "input",
+                "unit": "Minuten",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 7
+              },
+              {
+                "id": 9,
+                "label": "Max. Aufleimerversatz",
+                "type": "input",
+                "unit": "cm",
+                "value": "P2",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 3
+              },
+              {
+                "id": 10,
+                "label": "Aufbau",
+                "type": "select",
+                "options": [
+                  "Nach ANW 6",
+                  "Siehe skizze"
+                ],
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 9
+              },
+              {
+                "id": 11,
+                "label": "Aufleimermenge",
+                "type": "input",
+                "unit": "ml",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 10
+              },
+              {
+                "id": 12,
+                "label": "Kommentar",
+                "type": "input",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 11
+              }
+            ],
+            "active": true
+          },
+          {
+            "id": 2,
+            "name": "Plattenherstellung",
+            "position": null,
+            "fields": [
+              {
+                "id": 1,
+                "label": "Standard",
+                "type": "select",
+                "options": [
+                  "DIN EN 2565:2013-05",
+                  "DIN 65672:2009-06",
+                  "DIN 65671:1992-12",
+                  "Norm DIN EN 12576:1998-09",
+                  "DIN EN ISO 291",
+                  "DIN EN 527",
+                  "DIN EN ISO 527"
+                ],
+                "value": "Norm DIN EN 12576:1998-09",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 1
+              },
+              {
+                "id": 2,
+                "label": "Beschriftung",
+                "type": "input",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 2
+              },
+              {
+                "id": 3,
+                "label": "Verwendetes Gerät",
+                "type": "select",
+                "options": [
+                  "Kreissäge",
+                  "Zwick Z250",
+                  "Instron",
+                  "Bandsäge",
+                  "Ofen"
+                ],
+                "value": "Zwick Z250",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 3
+              },
+              {
+                "id": 4,
+                "label": "Anzahl Lagen",
+                "type": "input",
+                "value": "6",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 4
+              },
+              {
+                "id": 5,
+                "label": "Fasermaterial",
+                "type": "select",
+                "options": [
+                  "HexForce G1407 E150",
+                  "PentaForce G1243 A600",
+                  "DeltaForce G2040 L130 AIR"
+                ],
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 0
+              },
+              {
+                "id": 6,
+                "label": "Herstellungsdruck",
+                "type": "double-input",
+                "unit": "bar",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 5
+              },
+              {
+                "id": 7,
+                "label": "Ausrichtung",
+                "type": "input",
+                "unit": "Grad",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 6
+              },
+              {
+                "id": 8,
+                "label": "Verarbeitungszeit",
+                "type": "input",
+                "unit": "Minuten",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 7
+              },
+              {
+                "id": 9,
+                "label": "Kommentar",
+                "type": "input",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 8
+              }
+            ],
+            "active": true
+          },
+          {
+            "id": 3,
+            "name": "Prüfkörperzuschnitt",
+            "position": null,
+            "fields": [
+              {
+                "id": 1,
+                "label": "Standard",
+                "type": "select",
+                "options": [
+                  "DIN EN 2565:2013-05",
+                  "DIN 65672:2009-06",
+                  "DIN 65671:1992-12",
+                  "Norm DIN EN 12576:1998-09",
+                  "DIN EN ISO 291",
+                  "DIN EN 527",
+                  "DIN EN ISO 527"
+                ],
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 0
+              },
+              {
+                "id": 2,
+                "label": "Beschriftung",
+                "type": "input",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 1
+              },
+              {
+                "id": 3,
+                "label": "Verwendetes Gerät",
+                "type": "select",
+                "options": [
+                  "Kreissäge",
+                  "Zwick Z250",
+                  "Instron",
+                  "Bandsäge",
+                  "Ofen"
+                ],
+                "value": "Zwick Z250",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 2
+              },
+              {
+                "id": 4,
+                "label": "Material",
+                "type": "select",
+                "options": [
+                  "Fasermaterial",
+                  "Matrix",
+                  "Zusatzstoff",
+                  "Hardener",
+                  "Prepreg",
+                  "Spaltstreifen",
+                  "Klebstoff",
+                  "Hilfsmaterial"
+                ],
+                "value": "Fasermaterial",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 3
+              },
+              {
+                "id": 5,
+                "label": "Einspannlänge",
+                "type": "double-input",
+                "unit": "cm",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 4
+              },
+              {
+                "id": 6,
+                "label": "Schnittkanten",
+                "type": "double-input",
+                "unit": "",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 5
+              },
+              {
+                "id": 7,
+                "label": "Länge",
+                "type": "input",
+                "unit": "cm",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 6
+              },
+              {
+                "id": 8,
+                "label": "Breite",
+                "type": "input",
+                "unit": "cm",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 7
+              },
+              {
+                "id": 9,
+                "label": "Tiefe",
+                "type": "input",
+                "unit": "cm",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 8
+              },
+              {
+                "id": 10,
+                "label": "Sonstige Mängel",
+                "type": "input",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 9
+              },
+              {
+                "id": 11,
+                "label": "Kommentar",
+                "type": "input",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 10
+              }
+            ],
+            "active": true
+          }
+        ],
+        "testingSteps": [
+          {
+            "id": 4,
+            "name": "Generell",
+            "position": 0,
+            "fields": [
+              {
+                "id": 1,
+                "label": "Test Standard",
+                "type": "select",
+                "options": [
+                  "DIN EN 223",
+                  "DIN EN 527"
+                ],
+                "value": "DIN EN 223",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 0
+              },
+              {
+                "id": 2,
+                "label": "Beschriftung",
+                "type": "input",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 1
+              },
+              {
+                "id": 3,
+                "label": "Test Typ",
+                "type": "select",
+                "options": [
+                  "Zugversuch",
+                  "Bigsamkeitstest"
+                ],
+                "value": "Bigsamkeitstest",
+                "secondValue": null,
+                "active": true,
+                "checked": false,
+                "position": 3
+              },
+              {
+                "id": 4,
+                "label": "Verwendetes Gerät",
+                "type": "select",
+                "options": [
+                  "Kreissäge",
+                  "Zwick Z250",
+                  "Instron",
+                  "Bandsäge",
+                  "Ofen"
+                ],
+                "value": "Instron",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 2
+              },
+              {
+                "id": 5,
+                "label": "Einspannlänge",
+                "type": "input",
+                "unit": "cm",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 4
+              },
+              {
+                "id": 6,
+                "label": "Kommentar",
+                "type": "input",
+                "value": null,
+                "secondValue": null,
+                "active": false,
+                "checked": false,
+                "position": 5
+              }
+            ],
+            "active": true
+          },
+          {
+            "id": 5,
+            "name": "Klimatisierung",
+            "position": 1,
+            "fields": [
+              {
+                "id": 1,
+                "label": "Klima Standard",
+                "type": "select",
+                "options": [
+                  "DIN EN ISO 223",
+                  "DIN EN ISO 291"
+                ],
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 0
+              },
+              {
+                "id": 2,
+                "label": "Beschriftung",
+                "type": "input",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 1
+              },
+              {
+                "id": 3,
+                "label": "Klimaanlage Typ",
+                "type": "select",
+                "options": [
+                  "Luft",
+                  "Luft-Wasser",
+                  "Luft-Kältemittel",
+                  "Wasser"
+                ],
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 2
+              },
+              {
+                "id": 4,
+                "label": "Temperatur",
+                "type": "input",
+                "unit": "°C",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 3
+              },
+              {
+                "id": 5,
+                "label": "Luftfeuchtigkeit",
+                "type": "input",
+                "unit": "%",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 4
+              },
+              {
+                "id": 6,
+                "label": "Dauer",
+                "type": "input",
+                "unit": "Sekunden",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 5
+              },
+              {
+                "id": 7,
+                "label": "Kommentar",
+                "type": "input",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 6
+              }
+            ],
+            "active": false
+          },
+          {
+            "id": 6,
+            "name": "Zugprüfung",
+            "position": 2,
+            "fields": [
+              {
+                "id": 1,
+                "label": "Standard",
+                "type": "select",
+                "options": [
+                  "ISO 14129",
+                  "ISO 5079"
+                ],
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 0
+              },
+              {
+                "id": 2,
+                "label": "Beschriftung",
+                "type": "input",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 1
+              },
+              {
+                "id": 3,
+                "label": "Elastizitätsmodul Bestimmung",
+                "type": "select",
+                "options": [
+                  "Traversenweg",
+                  "Clip",
+                  "Dehnungsmessstreifen"
+                ],
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 2
+              },
+              {
+                "id": 4,
+                "label": "Geschwindigkeit",
+                "type": "input",
+                "unit": "kmh",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 3
+              },
+              {
+                "id": 5,
+                "label": "Vorspannung",
+                "type": "input",
+                "unit": "N",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 4
+              },
+              {
+                "id": 6,
+                "label": "Poisson-Verhältnis Bestimmung",
+                "type": "select",
+                "options": [
+                  "Dehnungsmessstreifen"
+                ],
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 5
+              },
+              {
+                "id": 7,
+                "label": "Dehngrenze",
+                "type": "input",
+                "unit": "N/mm²",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 6
+              },
+              {
+                "id": 8,
+                "label": "Maximale Prüfdauer",
+                "type": "input",
+                "unit": "Minuten",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 7
+              },
+              {
+                "id": 9,
+                "label": "Kommentar",
+                "type": "input",
+                "value": "",
+                "secondValue": "",
+                "active": true,
+                "checked": false,
+                "position": 8
+              }
+            ],
+            "active": false
+          }
+        ]
+      },
+      "id": 15
+    },
+    {
+      "message": "Schritt \"Plattenherstellung\" geöffnet.",
+      "mode": "sub",
+      "cause": "openStep",
+      "timestamp": 1561821794,
+      "id": 16
+    },
+    {
+      "message": "Step Plattenherstellung ausblenden.",
+      "mode": "sub",
+      "cause": "visibility",
+      "timestamp": 1561821797,
+      "id": 17
+    }
+  ],
+  "experiments": [
+    {
+      "id": 1,
+      "name": "Prüfkörperherstellung",
+      "steps": [
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Prüfkörper Test",
+      "steps": [
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Test 3",
+      "creator": "Testina",
+      "creationDate": "2019-06-26T12:30:05.047Z",
+      "productionExperimentId": 1,
+      "testingExperimentId": 2,
+      "type": "sub",
+      "id": 2,
+      "experimentName": "Prüfkörperherstellung",
+      "startDate": null,
+      "endDate": null,
+      "productionSteps": [
+        {
+          "id": 1,
+          "active": true,
+          "position": null,
+          "fields": [
+            {
+              "id": 1,
+              "value": "DIN EN ISO 291",
+              "secondValue": null,
+              "checked": false,
+              "active": true,
+              "position": 0
+            },
+            {
+              "id": 2,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 1
+            },
+            {
+              "id": 3,
+              "value": "Zwick Z250",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 4
+            },
+            {
+              "id": 4,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 2
+            },
+            {
+              "id": 5,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 5
+            },
+            {
+              "id": 6,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 6
+            },
+            {
+              "id": 7,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 6
+            },
+            {
+              "id": 8,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 7
+            },
+            {
+              "id": 9,
+              "value": "P2",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 3
+            },
+            {
+              "id": 10,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 9
+            },
+            {
+              "id": 11,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 10
+            },
+            {
+              "id": 12,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 11
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "active": true,
+          "position": null,
+          "fields": [
+            {
+              "id": 1,
+              "value": "Norm DIN EN 12576:1998-09",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 1
+            },
+            {
+              "id": 2,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 2
+            },
+            {
+              "id": 3,
+              "value": "Zwick Z250",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 3
+            },
+            {
+              "id": 4,
+              "value": "6",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 4
+            },
+            {
+              "id": 5,
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 0
+            },
+            {
+              "id": 6,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 5
+            },
+            {
+              "id": 7,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 6
+            },
+            {
+              "id": 8,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 7
+            },
+            {
+              "id": 9,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 8
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "active": true,
+          "position": null,
+          "fields": [
+            {
+              "id": 1,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 0
+            },
+            {
+              "id": 2,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 1
+            },
+            {
+              "id": 3,
+              "value": "Zwick Z250",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 2
+            },
+            {
+              "id": 4,
+              "value": "Fasermaterial",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 3
+            },
+            {
+              "id": 5,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 4
+            },
+            {
+              "id": 6,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 5
+            },
+            {
+              "id": 7,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 6
+            },
+            {
+              "id": 8,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 7
+            },
+            {
+              "id": 9,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 8
+            },
+            {
+              "id": 10,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 9
+            },
+            {
+              "id": 11,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 10
+            }
+          ]
+        }
+      ],
+      "testingSteps": [
+        {
+          "id": 4,
+          "active": true,
+          "position": 0,
+          "fields": [
+            {
+              "id": 1,
+              "value": "DIN EN 223",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 0
+            },
+            {
+              "id": 2,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 1
+            },
+            {
+              "id": 3,
+              "value": "Bigsamkeitstest",
+              "secondValue": null,
+              "checked": false,
+              "active": true,
+              "position": 3
+            },
+            {
+              "id": 4,
+              "value": "Instron",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 2
+            },
+            {
+              "id": 5,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 4
+            },
+            {
+              "id": 6,
+              "value": null,
+              "secondValue": null,
+              "checked": false,
+              "active": false,
+              "position": 5
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "active": false,
+          "position": 1,
+          "fields": [
+            {
+              "id": 1,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 0
+            },
+            {
+              "id": 2,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 1
+            },
+            {
+              "id": 3,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 2
+            },
+            {
+              "id": 4,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 3
+            },
+            {
+              "id": 5,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 4
+            },
+            {
+              "id": 6,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 5
+            },
+            {
+              "id": 7,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 6
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "active": false,
+          "position": 2,
+          "fields": [
+            {
+              "id": 1,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 0
+            },
+            {
+              "id": 2,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 1
+            },
+            {
+              "id": 3,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 2
+            },
+            {
+              "id": 4,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 3
+            },
+            {
+              "id": 5,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 4
+            },
+            {
+              "id": 6,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 5
+            },
+            {
+              "id": 7,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 6
+            },
+            {
+              "id": 8,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 7
+            },
+            {
+              "id": 9,
+              "value": "",
+              "secondValue": "",
+              "checked": false,
+              "active": true,
+              "position": 8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "name": "Aufleimerapplikation",
+      "fields": [
+        {
+          "id": 1,
+          "label": "Standard",
+          "type": "select",
+          "options": [
+            "DIN EN 2565:2013-05",
+            "DIN 65672:2009-06",
+            "DIN 65671:1992-12",
+            "Norm DIN EN 12576:1998-09",
+            "DIN EN ISO 291",
+            "DIN EN 527",
+            "DIN EN ISO 527"
+          ]
+        },
+        {
+          "id": 2,
+          "label": "Beschriftung",
+          "type": "input"
+        },
+        {
+          "id": 3,
+          "label": "Verwendetes Gerät",
+          "type": "select",
+          "options": [
+            "Kreissäge",
+            "Zwick Z250",
+            "Instron",
+            "Bandsäge",
+            "Ofen"
+          ]
+        },
+        {
+          "id": 4,
+          "label": "Temperaturbeständig bis",
+          "type": "input",
+          "unit": "°C"
+        },
+        {
+          "id": 5,
+          "label": "Klebstoff",
+          "type": "select",
+          "options": [
+            "Harz",
+            "Härter",
+            "Füllstoff"
+          ]
+        },
+        {
+          "id": 6,
+          "label": "Klebstoff Harz-Mischverhältnis",
+          "type": "double-input",
+          "unit": "%"
+        },
+        {
+          "id": 7,
+          "label": "Apllikationsprüfung",
+          "type": "select",
+          "options": [
+            "1x Stichprobe/Plate",
+            "2x Stichprobe/Plate",
+            "4x Stichprobe/Plate"
+          ]
+        },
+        {
+          "id": 8,
+          "label": "Verarbeitungszeit",
+          "type": "input",
+          "unit": "Minuten"
+        },
+        {
+          "id": 9,
+          "label": "Max. Aufleimerversatz",
+          "type": "input",
+          "unit": "cm"
+        },
+        {
+          "id": 10,
+          "label": "Aufbau",
+          "type": "select",
+          "options": [
+            "Nach ANW 6",
+            "Siehe skizze"
+          ]
+        },
+        {
+          "id": 11,
+          "label": "Aufleimermenge",
+          "type": "input",
+          "unit": "ml"
+        },
+        {
+          "id": 12,
+          "label": "Kommentar",
+          "type": "input"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Plattenherstellung",
+      "fields": [
+        {
+          "id": 1,
+          "label": "Standard",
+          "type": "select",
+          "options": [
+            "DIN EN 2565:2013-05",
+            "DIN 65672:2009-06",
+            "DIN 65671:1992-12",
+            "Norm DIN EN 12576:1998-09",
+            "DIN EN ISO 291",
+            "DIN EN 527",
+            "DIN EN ISO 527"
+          ]
+        },
+        {
+          "id": 2,
+          "label": "Beschriftung",
+          "type": "input"
+        },
+        {
+          "id": 3,
+          "label": "Verwendetes Gerät",
+          "type": "select",
+          "options": [
+            "Kreissäge",
+            "Zwick Z250",
+            "Instron",
+            "Bandsäge",
+            "Ofen"
+          ]
+        },
+        {
+          "id": 4,
+          "label": "Anzahl Lagen",
+          "type": "input"
+        },
+        {
+          "id": 5,
+          "label": "Fasermaterial",
+          "type": "select",
+          "options": [
+            "HexForce G1407 E150",
+            "PentaForce G1243 A600",
+            "DeltaForce G2040 L130 AIR"
+          ]
+        },
+        {
+          "id": 6,
+          "label": "Herstellungsdruck",
+          "type": "double-input",
+          "unit": "bar"
+        },
+        {
+          "id": 7,
+          "label": "Ausrichtung",
+          "type": "input",
+          "unit": "Grad"
+        },
+        {
+          "id": 8,
+          "label": "Verarbeitungszeit",
+          "type": "input",
+          "unit": "Minuten"
+        },
+        {
+          "id": 9,
+          "label": "Kommentar",
+          "type": "input"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Prüfkörperzuschnitt",
+      "fields": [
+        {
+          "id": 1,
+          "label": "Standard",
+          "type": "select",
+          "options": [
+            "DIN EN 2565:2013-05",
+            "DIN 65672:2009-06",
+            "DIN 65671:1992-12",
+            "Norm DIN EN 12576:1998-09",
+            "DIN EN ISO 291",
+            "DIN EN 527",
+            "DIN EN ISO 527"
+          ]
+        },
+        {
+          "id": 2,
+          "label": "Beschriftung",
+          "type": "input"
+        },
+        {
+          "id": 3,
+          "label": "Verwendetes Gerät",
+          "type": "select",
+          "options": [
+            "Kreissäge",
+            "Zwick Z250",
+            "Instron",
+            "Bandsäge",
+            "Ofen"
+          ]
+        },
+        {
+          "id": 4,
+          "label": "Material",
+          "type": "select",
+          "options": [
+            "Fasermaterial",
+            "Matrix",
+            "Zusatzstoff",
+            "Hardener",
+            "Prepreg",
+            "Spaltstreifen",
+            "Klebstoff",
+            "Hilfsmaterial"
+          ]
+        },
+        {
+          "id": 5,
+          "label": "Einspannlänge",
+          "type": "double-input",
+          "unit": "cm"
+        },
+        {
+          "id": 6,
+          "label": "Schnittkanten",
+          "type": "double-input",
+          "unit": ""
+        },
+        {
+          "id": 7,
+          "label": "Länge",
+          "type": "input",
+          "unit": "cm"
+        },
+        {
+          "id": 8,
+          "label": "Breite",
+          "type": "input",
+          "unit": "cm"
+        },
+        {
+          "id": 9,
+          "label": "Tiefe",
+          "type": "input",
+          "unit": "cm"
+        },
+        {
+          "id": 10,
+          "label": "Sonstige Mängel",
+          "type": "input"
+        },
+        {
+          "id": 11,
+          "label": "Kommentar",
+          "type": "input"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Generell",
+      "fields": [
+        {
+          "id": 1,
+          "label": "Test Standard",
+          "type": "select",
+          "options": [
+            "DIN EN 223",
+            "DIN EN 527"
+          ]
+        },
+        {
+          "id": 2,
+          "label": "Beschriftung",
+          "type": "input"
+        },
+        {
+          "id": 3,
+          "label": "Test Typ",
+          "type": "select",
+          "options": [
+            "Zugversuch",
+            "Bigsamkeitstest"
+          ]
+        },
+        {
+          "id": 4,
+          "label": "Verwendetes Gerät",
+          "type": "select",
+          "options": [
+            "Kreissäge",
+            "Zwick Z250",
+            "Instron",
+            "Bandsäge",
+            "Ofen"
+          ]
+        },
+        {
+          "id": 5,
+          "label": "Einspannlänge",
+          "type": "input",
+          "unit": "cm"
+        },
+        {
+          "id": 6,
+          "label": "Kommentar",
+          "type": "input"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Klimatisierung",
+      "fields": [
+        {
+          "id": 1,
+          "label": "Klima Standard",
+          "type": "select",
+          "options": [
+            "DIN EN ISO 223",
+            "DIN EN ISO 291"
+          ]
+        },
+        {
+          "id": 2,
+          "label": "Beschriftung",
+          "type": "input"
+        },
+        {
+          "id": 3,
+          "label": "Klimaanlage Typ",
+          "type": "select",
+          "options": [
+            "Luft",
+            "Luft-Wasser",
+            "Luft-Kältemittel",
+            "Wasser"
+          ]
+        },
+        {
+          "id": 4,
+          "label": "Temperatur",
+          "type": "input",
+          "unit": "°C"
+        },
+        {
+          "id": 5,
+          "label": "Luftfeuchtigkeit",
+          "type": "input",
+          "unit": "%"
+        },
+        {
+          "id": 6,
+          "label": "Dauer",
+          "type": "input",
+          "unit": "Sekunden"
+        },
+        {
+          "id": 7,
+          "label": "Kommentar",
+          "type": "input"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Zugprüfung",
+      "fields": [
+        {
+          "id": 1,
+          "label": "Standard",
+          "type": "select",
+          "options": [
+            "ISO 14129",
+            "ISO 5079"
+          ]
+        },
+        {
+          "id": 2,
+          "label": "Beschriftung",
+          "type": "input"
+        },
+        {
+          "id": 3,
+          "label": "Elastizitätsmodul Bestimmung",
+          "type": "select",
+          "options": [
+            "Traversenweg",
+            "Clip",
+            "Dehnungsmessstreifen"
+          ]
+        },
+        {
+          "id": 4,
+          "label": "Geschwindigkeit",
+          "type": "input",
+          "unit": "kmh"
+        },
+        {
+          "id": 5,
+          "label": "Vorspannung",
+          "type": "input",
+          "unit": "N"
+        },
+        {
+          "id": 6,
+          "label": "Poisson-Verhältnis Bestimmung",
+          "type": "select",
+          "options": [
+            "Dehnungsmessstreifen"
+          ]
+        },
+        {
+          "id": 7,
+          "label": "Dehngrenze",
+          "type": "input",
+          "unit": "N/mm²"
+        },
+        {
+          "id": 8,
+          "label": "Maximale Prüfdauer",
+          "type": "input",
+          "unit": "Minuten"
+        },
+        {
+          "id": 9,
+          "label": "Kommentar",
+          "type": "input"
+        }
+      ]
+    }
+  ]
+}

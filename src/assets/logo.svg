@@ -1,0 +1,22 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="10cm" height="10cm" viewBox="0 0 283.46 283.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #617d8b;
+      }
+
+      .cls-2 {
+        font-size: 84.04px;
+        fill: #ee6f49;
+        font-family: Roboto-Black, Roboto Black;
+      }
+
+      .cls-3 {
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </defs>
+  <title>logo</title>
+  <rect class="cls-1" width="283.46" height="283.46"/>
+  <text class="cls-2" transform="translate(21.54 166.67)">C<tspan class="cls-3" x="55.15" y="0">M</tspan><tspan x="129.54" y="0">AD</tspan></text>
+</svg>

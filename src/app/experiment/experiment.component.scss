@@ -1,0 +1,79 @@
+@import '../../styles.scss';
+
+form {
+    padding: 0 4%;
+}
+
+h1 {
+    font-weight: bolder !important;
+    color: $primary;
+}
+
+.back-button {
+    left: -15px;
+}
+
+.action-button {
+    margin-left: 15px;
+
+    &.-is-primary span {
+        color: $primary !important;
+    }
+}
+
+.mat-form-field {
+    margin-right: 20px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    margin: -20px;
+    position: absolute;
+    top: 80px;
+    height: 50px;
+    z-index: 10;
+    color: $primary;
+
+    &.-is-fixed {
+        position: fixed;
+        top: 20px;
+    }
+}
+
+form {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    position: relative;
+
+    button {
+        margin-left: 0;
+    }
+}
+
+span {
+    display: block;
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.action-button span {
+    color: $primary;
+}
+
+app-step {
+    max-height: 2000px;
+    display: block;
+    transition: max-height 0.2s;
+
+    &.-is-disabled {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+}

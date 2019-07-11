@@ -1,0 +1,87 @@
+<!-- <h1 mat-dialog-title>Help</h1> -->
+<h1 mat-dialog-title>Hilfe</h1>
+<div mat-dialog-content>
+
+    <mat-list class="help-dialog" *ngIf="isEn">
+        <mat-list-item>
+            <mat-icon class="orange-background" matListIcon>add</mat-icon>
+            <h2 matLine><strong>Create</strong></h2>
+            <p matLine>Use this to create a new Project.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" matListIcon>filter_list</mat-icon>
+            <h2 matLine><strong>Customize</strong></h2>
+            <p matLine>Use this to minimize all steps for customizing their relevance and order.</p>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon color="accent" matListIcon>edit</mat-icon>
+            <h2 matLine><strong>Edit Mode</strong></h2>
+            <p matLine>Use this to switch to the edit mode.</p>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon color="accent" matListIcon>visibility</mat-icon>
+            <h2 matLine><strong>View Mode</strong></h2>
+            <p matLine>Use this to switch to the view mode.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" matListIcon>drag_indicator</mat-icon>
+            <h2 matLine><strong>Drag Handle</strong></h2>
+            <p matLine>Use this to drag a step or an attribute to another position.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" class="with-background" matListIcon>visibility_off</mat-icon>
+            <h2 matLine><strong>Hide</strong></h2>
+            <p matLine>Use this to mark a step or attribute as not relevant, so it will not be shown in the documentation.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" class="with-background" matListIcon>visibility</mat-icon>
+            <h2 matLine><strong>Show</strong></h2>
+            <p matLine>Use this to mark a step or attribute as relevant, so it will be shown in the documentation.</p>
+        </mat-list-item>
+    </mat-list>
+
+
+    <mat-list class="help-dialog" *ngIf="isDe">
+        <mat-list-item>
+            <mat-icon class="orange-background" matListIcon>add</mat-icon>
+            <h2 matLine><strong>Erstellen</strong></h2>
+            <p matLine>Erstelle ein neues Projekt.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" matListIcon>filter_list</mat-icon>
+            <h2 matLine><strong>Anpassen</strong></h2>
+            <p matLine>Passe die Reihenfolge und Relevanz der Schritte an. Dazu werden alle Schritte minimiert.</p>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon color="accent" matListIcon>edit</mat-icon>
+            <h2 matLine><strong>Bearbeitungs Modus</strong></h2>
+            <p matLine>Wechsel in den Bearbeitungs Modus der Dokumentation.</p>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon color="accent" matListIcon>visibility</mat-icon>
+            <h2 matLine><strong>Ansichts Modus</strong></h2>
+            <p matLine>Wechsel in den Ansichts Modus der Dokumentation.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" matListIcon>drag_indicator</mat-icon>
+            <h2 matLine><strong>Zieh-Griff (Drag & Drop)</strong></h2>
+            <p matLine>Ziehe hiermit einen Schritt oder ein Attribut an eine andere Position.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" class="with-background" matListIcon>visibility_off</mat-icon>
+            <h2 matLine><strong>Nicht Anzeigen/Verbergen</strong></h2>
+            <p matLine>Markiere einen Schritt oder ein Attribut als nicht relevant, sodass dieser/dieses nicht in der Dokumentation angezeigt wird.</p>
+        </mat-list-item>
+        <mat-list-item *ngIf="mode !== 'none'">
+            <mat-icon color="accent" class="with-background" matListIcon>visibility</mat-icon>
+            <h2 matLine><strong>Anzeigen</strong></h2>
+            <p matLine>Markiere einen Schritt oder ein Attribut als relevant, sodass dieser/dieses in der Dokumentation angezeigt wird.</p>
+        </mat-list-item>
+    </mat-list>
+
+    <br>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Close</button>
+</div>

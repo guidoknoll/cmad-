@@ -1,0 +1,352 @@
+{ "steps" :
+    [
+        {
+            "id" : 1,
+            "name": "Aufleimerapplikation",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Standard",
+                    "type": "select",
+                    "options": ["DIN EN 2565:2013-05", "DIN 65672:2009-06", "DIN 65671:1992-12", "Norm DIN EN 12576:1998-09", "DIN EN ISO 291", "DIN EN 527", "DIN EN ISO 527"]
+                },
+                {
+                    "id": 2,
+                    "label": "Beschriftung",
+                    "type": "input"
+                },
+                {
+                    "id": 3,
+                    "label": "Verwendetes Gerät",
+                    "type": "select",
+                    "options": ["Kreissäge", "Zwick Z250", "Instron", "Bandsäge", "Ofen"]
+                },
+                {
+                    "id": 4,
+                    "label": "Temperaturbeständig bis",
+                    "type": "input",
+                    "unit": "°C"
+                },
+                {
+                    "id": 5,
+                    "label": "Klebstoff",
+                    "type": "select",
+                    "options": ["Harz", "Härter", "Füllstoff"]
+                },
+                {
+                    "id": 6,
+                    "label": "Klebstoff Harz-Mischverhältnis",
+                    "type": "double-input",
+                    "unit": "%"
+                },
+                {
+                    "id": 7,
+                    "label": "Apllikationsprüfung",
+                    "type": "select",
+                    "options": ["1x Stichprobe/Plate", "2x Stichprobe/Plate", "4x Stichprobe/Plate"]
+                },
+                {
+                    "id": 8,
+                    "label": "Verarbeitungszeit",
+                    "type": "input",
+                    "unit": "Minuten"
+                },
+                {
+                    "id": 9,
+                    "label": "Max. Aufleimerversatz",
+                    "type": "input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 10,
+                    "label": "Aufbau",
+                    "type": "select",
+                    "options": ["Nach ANW 6", "Siehe skizze"]
+                },
+                {
+                    "id": 11,
+                    "label": "Aufleimermenge",
+                    "type": "input",
+                    "unit": "ml"
+                },
+                {
+                    "id": 12,
+                    "label": "Kommentar",
+                    "type": "input"
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "name": "Plattenherstellung",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Standard",
+                    "type": "select",
+                    "options": ["DIN EN 2565:2013-05", "DIN 65672:2009-06", "DIN 65671:1992-12", "Norm DIN EN 12576:1998-09", "DIN EN ISO 291", "DIN EN 527", "DIN EN ISO 527"]
+                },
+                {
+                    "id": 2,
+                    "label": "Beschriftung",
+                    "type": "input"
+                },
+                {
+                    "id": 3,
+                    "label": "Verwendetes Gerät",
+                    "type": "select",
+                    "options": ["Kreissäge", "Zwick Z250", "Instron", "Bandsäge", "Ofen"]
+                },
+                {
+                    "id": 4,
+                    "label": "Anzahl Lagen",
+                    "type": "input"
+                },
+                {
+                    "id": 5,
+                    "label": "Fasermaterial",
+                    "type": "select",
+                    "options": ["HexForce G1407 E150",
+                                "PentaForce G1243 A600",
+                                "DeltaForce G2040 L130 AIR"]
+                },
+                {
+                    "id": 6,
+                    "label": "Herstellungsdruck",
+                    "type": "double-input",
+                    "unit": "bar"
+                },
+                {
+                    "id": 7,
+                    "label": "Ausrichtung",
+                    "type": "input",
+                    "unit": "Grad"
+                },
+                {
+                    "id": 8,
+                    "label": "Verarbeitungszeit",
+                    "type": "input",
+                    "unit": "Minuten"
+                },
+                {
+                    "id": 9,
+                    "label": "Kommentar",
+                    "type": "input"
+                }
+            ]
+        },
+        {
+            "id" : 3,
+            "name": "Prüfkörperzuschnitt",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Standard",
+                    "type": "select",
+                    "options": ["DIN EN 2565:2013-05", "DIN 65672:2009-06", "DIN 65671:1992-12", "Norm DIN EN 12576:1998-09", "DIN EN ISO 291", "DIN EN 527", "DIN EN ISO 527"]
+                },
+                {
+                    "id": 2,
+                    "label": "Beschriftung",
+                    "type": "input"
+                },
+                {
+                    "id": 3,
+                    "label": "Verwendetes Gerät",
+                    "type": "select",
+                    "options": ["Kreissäge", "Zwick Z250", "Instron", "Bandsäge", "Ofen"]
+                },
+                {
+                    "id": 4,
+                    "label": "Material",
+                    "type": "select",
+                    "options": ["Fasermaterial", "Matrix", "Zusatzstoff", "Hardener", "Prepreg", "Spaltstreifen", "Klebstoff", "Hilfsmaterial"]
+                },
+                {
+                    "id": 5,
+                    "label": "Einspannlänge",
+                    "type": "double-input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 6,
+                    "label": "Schnittkanten",
+                    "type": "double-input",
+                    "unit": ""
+                },
+                {
+                    "id": 7,
+                    "label": "Länge",
+                    "type": "input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 8,
+                    "label": "Breite",
+                    "type": "input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 9,
+                    "label": "Tiefe",
+                    "type": "input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 10,
+                    "label": "Sonstige Mängel",
+                    "type": "input"
+                },
+                {
+                    "id": 11,
+                    "label": "Kommentar",
+                    "type": "input"
+                }
+            ]
+        },
+        {
+            "id" : 4,
+            "name": "Generell",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Test Standard",
+                    "type": "select",
+                    "options": ["DIN EN 223", "DIN EN 527"]
+                },
+                {
+                    "id": 2,
+                    "label": "Beschriftung",
+                    "type": "input"
+                },
+                {
+                    "id": 3,
+                    "label": "Test Typ",
+                    "type": "select",
+                    "options": ["Zugversuch", "Bigsamkeitstest"]
+                },
+                {
+                    "id": 4,
+                    "label": "Verwendetes Gerät",
+                    "type": "select",
+                    "options": ["Kreissäge", "Zwick Z250", "Instron", "Bandsäge", "Ofen"]
+                },
+                {
+                    "id": 5,
+                    "label": "Einspannlänge",
+                    "type": "input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 6,
+                    "label": "Kommentar",
+                    "type": "input"
+                }
+            ]
+        },
+        {
+            "id" : 5,
+            "name": "Klimatisierung",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Klima Standard",
+                    "type": "select",
+                    "options": ["DIN EN ISO 223", "DIN EN ISO 291"]
+                },
+                {
+                    "id": 2,
+                    "label": "Beschriftung",
+                    "type": "input"
+                },
+                {
+                    "id": 3,
+                    "label": "Klimaanlage Typ",
+                    "type": "select",
+                    "options": ["Luft", "Luft-Wasser", "Luft-Kältemittel", "Wasser"]
+                },
+                {
+                    "id": 4,
+                    "label": "Temperatur",
+                    "type": "input",
+                    "unit": "°C"
+                },
+                {
+                    "id": 5,
+                    "label": "Luftfeuchtigkeit",
+                    "type": "input",
+                    "unit": "%"
+                }, 
+                {
+                    "id": 6,
+                    "label": "Dauer",
+                    "type": "input",
+                    "unit": "Sekunden"
+                },
+                {
+                    "id": 7,
+                    "label": "Kommentar",
+                    "type": "input"
+                }
+            ]
+        },
+        {
+            "id" : 6,
+            "name": "Zugprüfung",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Standard",
+                    "type": "select",
+                    "options": ["ISO 14129", "ISO 5079"]
+                },
+                {
+                    "id": 2,
+                    "label": "Beschriftung",
+                    "type": "input"
+                },
+                {
+                    "id": 3,
+                    "label": "Elastizitätsmodul Bestimmung",
+                    "type": "select",
+                    "options": ["Traversenweg", "Clip", "Dehnungsmessstreifen"]
+                },
+                {
+                    "id": 4,
+                    "label": "Geschwindigkeit",
+                    "type": "input",
+                    "unit": "kmh"
+                },
+                {
+                    "id": 5,
+                    "label": "Vorspannung",
+                    "type": "input",
+                    "unit": "N"
+                },
+                {
+                    "id": 6,
+                    "label": "Poisson-Verhältnis Bestimmung",
+                    "type": "select",
+                    "options": ["Dehnungsmessstreifen"]
+                },
+                {
+                    "id": 7,
+                    "label": "Dehngrenze",
+                    "type": "input",
+                    "unit": "N/mm²"
+                },
+                {
+                    "id": 8,
+                    "label": "Maximale Prüfdauer",
+                    "type": "input",
+                    "unit": "Minuten"
+                },
+                {
+                    "id": 9,
+                    "label": "Kommentar",
+                    "type": "input"
+                }
+            ]
+        }
+    ]
+}

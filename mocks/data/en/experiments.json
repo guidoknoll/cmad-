@@ -1,0 +1,18 @@
+{ "experiments" :
+    [
+        {
+            "id" : 1,
+            "name": "Specimen production",
+            "steps": [
+                1, 2, 3
+            ]
+        },
+        {
+            "id" : 2,
+            "name": "Specimen Testing",
+            "steps": [
+                4, 5, 6
+            ]
+        }
+    ]
+}

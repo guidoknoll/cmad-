@@ -1,0 +1,229 @@
+<mat-toolbar color="white" [class.-is-fixed]="navIsFixed">
+  <button class="back-button" mat-button routerLink="/" (click)="clickOnBackButton()" *ngIf="isEn">
+    <mat-icon>chevron_left</mat-icon> back
+  </button>
+  <button class="back-button" mat-button routerLink="/" (click)="clickOnBackButton()" *ngIf="isDe">
+    <mat-icon>chevron_left</mat-icon> zurück
+  </button>
+  <span class="spacer"></span>
+  <h1 *ngIf="project.name">{{ project.name }}</h1>
+  <h1 *ngIf="!project.name && isEn"><i>Untitled Project</i></h1>
+  <h1 *ngIf="!project.name && isDe"><i>Unbenanntes Projekt</i></h1>
+
+  <button class="action-button -is-primary" mat-button
+                                *ngIf="!deleteClicked"
+                                (click)="clickOnDelete()">
+    <mat-icon color="primary">delete</mat-icon>
+    <span *ngIf="isEn">&nbsp; Delete</span>
+    <span *ngIf="isDe">&nbsp; Löschen</span>
+  </button>
+
+  <button class="action-button" mat-flat-button
+                                [hidden]="!deleteClicked"
+                                #tooltip="matTooltip"
+                                matTooltip="Zum Löschen erneut klicken"
+                                (click)="deleteProject()">
+      <mat-icon color="warn">delete</mat-icon>
+      <span *ngIf="isEn">&nbsp; Delete</span>
+      <span *ngIf="isDe">&nbsp; Löschen</span>
+  </button>
+
+  <button class="action-button -is-primary" mat-button 
+                                matBadge="1" 
+                                matBadgePosition="after" 
+                                matBadgeColor="warn" 
+                                matBadgeSize="small" 
+                                [matBadgeHidden]="!form.dirty"
+                                (click)="save()"
+                                *ngIf="form">
+    <mat-icon color="primary">save</mat-icon>
+    <span *ngIf="isEn">&nbsp; Save</span>
+    <span *ngIf="isDe">&nbsp; Fertig</span>
+  </button>
+
+  <button class="action-button" mat-flat-button
+                                (click)="switchEditMode()">
+    <mat-icon color="accent" *ngIf="!editMode">edit</mat-icon>
+    <mat-icon color="accent" *ngIf="editMode">visibility</mat-icon>
+    <span *ngIf="!editMode && isEn">&nbsp; Edit</span>
+    <span *ngIf="editMode && isEn">&nbsp; View</span>
+
+    <span *ngIf="!editMode && isDe">&nbsp; Bearbeiten</span>
+    <span *ngIf="editMode && isDe">&nbsp; Ansehen</span>
+  </button>
+
+  <button mat-flat-button 
+        (click)="toggleMoveMode()"
+        [disabled]="!(!moveMode && editMode && !isType('none'))"
+        *ngIf="!isType('none')"
+        class="action-button">
+    <mat-icon color="accent">filter_list</mat-icon>
+    <span *ngIf="isEn">&nbsp; Customize</span>
+    <span *ngIf="isDe">&nbsp; Schritte Anpassen</span>
+  </button>
+
+</mat-toolbar>
+
+<form *ngIf="form" [formGroup]="form">
+
+  <ng-container *ngIf="editMode">
+
+    <mat-form-field appearance="outline"
+                   matBadge="1" 
+                   matBadgeColor="warn" 
+                   matBadgeSize="small" 
+                   [matBadgeHidden]="form.value.name !== '' || isType('none')">
+        <mat-label>Name</mat-label>
+        <input matInput 
+               formControlName="name"
+               (focus)="onNameFocus()"
+               (focusout)="onNameFocusOut()">
+      </mat-form-field>
+    
+      <div class="grid-2-col">
+    
+        <mat-form-field appearance="outline">
+          <mat-label *ngIf="isEn">Start Date</mat-label>
+          <mat-label *ngIf="isDe">Start Datum</mat-label>
+          <input matInput [matDatepicker]="picker1" formControlName="startDate">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1 touchUi="true"></mat-datepicker>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+          <mat-label *ngIf="isEn">End Date</mat-label>
+          <mat-label *ngIf="isDe">End Datum</mat-label>
+          <input matInput [matDatepicker]="picker2" formControlName="endDate" disabled>
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2 touchUi="true" disabled="false"></mat-datepicker>
+        </mat-form-field>
+    
+      </div>
+
+  </ng-container>
+
+  <ul *ngIf="!editMode">
+    <li>
+      <strong>Name</strong>
+      <span *ngIf="form.value.name">{{ form.value.name }}</span>
+      <span *ngIf="!form.value.name"><i>Untitled Project</i></span>
+    </li>
+    <li>
+      <strong *ngIf="isEn">Creator</strong>
+      <strong *ngIf="isDe">Ersteller</strong>
+      <span>{{ form.value.creator }}</span>
+    </li>
+    <li>
+      <strong *ngIf="isEn">Creation Date</strong>
+      <strong *ngIf="isDe">Erstellungs Datum</strong>
+      <span>{{ form.value.creationDate | date }}</span>
+    </li>
+    <li *ngIf="form.value.startDate">
+      <strong *ngIf="isEn">Start Date</strong>
+      <strong *ngIf="isDe">Start Datum</strong>
+      <span>{{ form.value.startDate | date }}</span>
+    </li>
+    <li *ngIf="form.value.endDate">
+      <strong *ngIf="isEn">End Date</strong>
+      <strong *ngIf="isDe">End Datum</strong>
+      <span>{{ form.value.endDate | date }}</span>
+    </li>
+  </ul>
+
+  <br>
+
+  <h1>1. {{ productionExperiment.name }}</h1>
+  
+  <mat-accordion cdkDropList
+                 [cdkDropListDisabled]="isType('none')"
+                 (cdkDropListDropped)="productionDrop($event)"
+                 #accordion1="matAccordion" 
+                 [multi]="!editMode || !moveMode" 
+                 [hideToggle]="!editMode">
+
+    <span formArrayName="productionSteps" 
+          *ngFor="let step of form.get('productionSteps').controls; let i = index"
+          cdkDrag 
+          [cdkDragDisabled]="!step.value.active"
+          cdkDragLockAxis="y" 
+          cdkDragBoundary=".mat-accordion">
+      <app-step  
+                [title]="step.value.name" 
+                [step]="step"
+                [form]="form"
+                [formGroupName]="i"
+                [index]="i"
+                [isFirst]="i === 0"
+                [isLast]="i === productionExperiment.steps.length -1"
+                [toggleEvent]="toggleStepSubject.asObservable()"
+                [editMode]="editMode"
+                [moveMode]="moveMode"
+                (openPanel)="disableMoveMode()"
+                (closePanel)="enableMoveMode()"
+                *ngIf="step.value.active || isType('none')"
+                prefix="1"
+                matBadge="1" 
+                matBadgeColor="warn" 
+                matBadgeSize="small" 
+                [matBadgeHidden]="anyAttributeEmpty(step) || !editMode || isType('none')">
+        <mat-icon slot="drag-handle" matPrefix cdkDragHandle color="accent">drag_indicator</mat-icon>
+      </app-step>
+
+      <div class="disabled-step" *ngIf="!step.value.active && editMode && !isType('none')">
+          <mat-icon matPrefix *ngIf="!step.value.active" color="accent" (click)="toggleStep(step)">visibility</mat-icon>
+          <span *ngIf="isDe">Verborgen: {{ step.value.name }}</span>
+          <span *ngIf="isEn">Hidden: {{ step.value.name }}</span>
+      </div>
+    </span>
+    
+  </mat-accordion>
+
+
+  <br><br>
+
+  <h1>2. {{ testingExperiment.name }}</h1>
+  
+  <mat-accordion cdkDropList
+                 [cdkDropListDisabled]="isType('none')"
+                 (cdkDropListDropped)="testingDrop($event)"
+                 #accordion2="matAccordion" 
+                 [multi]="!editMode || !moveMode" 
+                 [hideToggle]="!editMode">
+
+    <span formArrayName="testingSteps" 
+          *ngFor="let step of form.get('testingSteps').controls; let i = index"
+          cdkDrag 
+          cdkDragLockAxis="y" 
+          cdkDragBoundary=".mat-accordion">
+      <app-step  
+                [title]="step.value.name" 
+                [step]="step"
+                [form]="form"
+                [formGroupName]="i"
+                [index]="i"
+                [isFirst]="i === 0"
+                [isLast]="i === testingExperiment.steps.length -1"
+                [toggleEvent]="toggleStepSubject.asObservable()"
+                [editMode]="editMode"
+                [moveMode]="moveMode"
+                (openPanel)="disableMoveMode()"
+                (closePanel)="enableMoveMode()"
+                *ngIf="step.value.active || isType('none')"
+                prefix="2"
+                matBadge="1" 
+                matBadgeColor="warn" 
+                matBadgeSize="small" 
+                [matBadgeHidden]="anyAttributeEmpty(step) || !editMode || isType('none')">
+        <mat-icon slot="drag-handle" matPrefix cdkDragHandle color="accent">drag_indicator</mat-icon>
+      </app-step>
+
+      <div class="disabled-step" *ngIf="!step.value.active && editMode && !isType('none')">
+          <mat-icon matPrefix *ngIf="!step.value.active" color="accent" (click)="toggleStep(step)">visibility</mat-icon>
+          <span *ngIf="isDe">Verborgen: {{ step.value.name }}</span>
+          <span *ngIf="isEn">Hidden: {{ step.value.name }}</span>
+      </div>
+    </span>
+    
+  </mat-accordion>
+
+</form>

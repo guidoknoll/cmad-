@@ -1,0 +1,50 @@
+<h1>Administration</h1>
+
+<mat-tab-group>
+    <mat-tab label="Logs">
+
+        <h2>
+            Logs
+            <button mat-button (click)="refreshLogs()" style="position: relative; top: -4px;">
+                <mat-icon color="primary">refresh</mat-icon>
+            </button>
+        </h2>
+        
+        <div *ngFor="let log of logs">
+            <span>{{ log.mode }} &nbsp;&nbsp;&nbsp;</span>
+            <span>{{ log.timestamp * 1000 | date: 'dd.MM.yyyy - hh:mm:ss' }} Uhr &nbsp;&nbsp;&nbsp;</span>
+            <span>{{ log.cause }} &nbsp;&nbsp;&nbsp;</span>
+            <span>{{ log.message }}</span>
+        </div>
+
+    </mat-tab>
+    <mat-tab label="Export">
+
+        <p><strong>Current Mode:</strong> {{ mode }}</p>
+
+        <mat-radio-group (change)="changeMode($event)" [value]="mode">
+            <mat-radio-button value="sub">CMAD-</mat-radio-button>
+            <mat-radio-button value="add">CMAD+</mat-radio-button>
+            <mat-radio-button value="none">CD</mat-radio-button>
+        </mat-radio-group>
+
+        <br><br>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Proband ID" [(ngModel)]="probandId">
+        </mat-form-field>
+        
+        <button mat-flat-button color="primary" (click)="saveLogs()">
+            Export
+        </button>
+
+        <button mat-flat-button color="accent" (click)="clickOnDelete()" *ngIf="!deleteClicked">
+            Export & Delete Logs
+        </button>
+
+        <button mat-flat-button color="warn" (click)="deleteLogs()" *ngIf="deleteClicked">
+            Export & Delete Logs
+        </button>
+        
+    </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,250 @@
+{ "steps" :
+    [
+        {
+            "id" : 1,
+            "name": "Cap strips",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Standard",
+                    "type": "select",
+                    "options": ["DIN EN 2565:2013-05", "DIN 65672:2009-06", "DIN 65671:1992-12", "Norm DIN EN 12576:1998-09", "DIN EN ISO 291", "DIN EN 527", "DIN EN ISO 527"]
+                },
+                {
+                    "id": 2,
+                    "label": "Temperature resistant to",
+                    "type": "input",
+                    "unit": "°C"
+                },
+                {
+                    "id": 3,
+                    "label": "Used devices",
+                    "type": "select",
+                    "options": ["Band saw", "Zwick Z250", "Instron", "Circular saw"]
+                },
+                {
+                    "id": 4,
+                    "label": "Overall rating",
+                    "type": "select",
+                    "options": ["All right", "not all right", "Revaluation follows"]
+                },
+                {
+                    "id": 5,
+                    "label": "Glue resin maxing ratio",
+                    "type": "double-input",
+                    "unit": "%"
+                },
+                {
+                    "id": 6,
+                    "label": "Examination",
+                    "type": "select",
+                    "options": ["1x Sample/Plate", "2x Sample/Plate", "4x Sample/Plate"]
+                },
+                {
+                    "id": 7,
+                    "label": "Processing time",
+                    "type": "input",
+                    "unit": "minutes"
+                },
+                {
+                    "id": 7,
+                    "label": "Max. offset",
+                    "type": "input",
+                    "unit": "mm"
+                },
+                {
+                    "id": 8,
+                    "label": "Structure",
+                    "type": "select",
+                    "options": ["Based on ANW 6", "See skatch"]
+                },
+                {
+                    "id": 9,
+                    "label": "Glue available",
+                    "type": "checkbox"
+                },
+                {
+                    "id": 10,
+                    "label": "Glue amount",
+                    "type": "input",
+                    "unit": "ml"
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "name": "Specimen production",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Label",
+                    "type": "input"
+                },
+                {
+                    "id": 2,
+                    "label": "Standard",
+                    "type": "select",
+                    "options": ["DIN EN 12576:1998-09",
+                                "DIN 65672:2009-06", 
+                                "DIN 65071:1992-12",
+                                "DIN EN 2565:2013-05"]
+                },
+                {
+                    "id": 3,
+                    "label": "Layers",
+                    "type": "input"
+                },
+                {
+                    "id": 4,
+                    "label": "Used devices",
+                    "type": "select",
+                    "options": ["Band saw", "Zwick Z250", "Instron", "Circular saw"]
+                },
+                {
+                    "id": 5,
+                    "label": "Fiber material",
+                    "type": "select",
+                    "options": ["HexForce G1407 E150",
+                                "PentaForce G1243 A600",
+                                "DeltaForce G2040 L130 AIR"]
+                }
+            ]
+        },
+        {
+            "id" : 3,
+            "name": "Specimen cutting",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Material",
+                    "type": "select",
+                    "options": ["Fibre material", "Matrix", "Additive", "Hardener", "Prepreg", "Gapstrips", "Adhesive", "AuxiliaryMaterial"]
+                },
+                {
+                    "id": 2,
+                    "label": "Cutting machine",
+                    "type": "select",
+                    "options": ["Band saw", "Zwick Z250", "Instron", "Circular saw"]
+                },
+                {
+                    "id": 3,
+                    "label": "Clamping length",
+                    "type": "double-input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 4,
+                    "label": "Cut edges",
+                    "type": "double-input",
+                    "unit": ""
+                },
+                {
+                    "id": 5,
+                    "label": "Length",
+                    "type": "input",
+                    "unit": "cm"
+                },
+                {
+                    "id": 6,
+                    "label": "Width",
+                    "type": "input",
+                    "unit": "cm"
+                }
+            ]
+        },
+        {
+            "id" : 4,
+            "name": "General",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Test type",
+                    "type": "select",
+                    "options": ["Tensile test", "Bending test"]
+                },
+                {
+                    "id": 2,
+                    "label": "Testing standard",
+                    "type": "select",
+                    "options": ["None", "DIN EN 527"]
+                },
+                {
+                    "id": 3,
+                    "label": "Label",
+                    "type": "input"
+                },
+                {
+                    "id": 4,
+                    "label": "Testing machine",
+                    "type": "select",
+                    "options": ["Band saw", "Zwick Z250", "Instron", "Circular saw"]
+                },
+                {
+                    "id": 5,
+                    "label": "Comment",
+                    "type": "input"
+                }
+            ]
+        },
+        {
+            "id" : 5,
+            "name": "Air conditioning",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "Climate standard",
+                    "type": "select",
+                    "options": ["None", "DIN EN ISO 291"]
+                },
+                {
+                    "id": 2,
+                    "label": "Temperature",
+                    "type": "input",
+                    "unit": "°C"
+                },
+                {
+                    "id": 3,
+                    "label": "Humidity",
+                    "type": "input",
+                    "unit": "%"
+                },
+                {
+                    "id": 4,
+                    "label": "Duration",
+                    "type": "input",
+                    "unit": "seconds"
+                }
+            ]
+        },
+        {
+            "id" : 6,
+            "name": "Tensile test",
+            "fields": [
+                {
+                    "id": 1,
+                    "label": "E modulus det.",
+                    "type": "select",
+                    "options": ["Crosshead travel", "Clip on", "Strain gauge"]
+                },
+                {
+                    "id": 2,
+                    "label": "Testing speed",
+                    "type": "input",
+                    "unit": "mps"
+                },
+                {
+                    "id": 3,
+                    "label": "Preload",
+                    "type": "input",
+                    "unit": "N"
+                },
+                {
+                    "id": 4,
+                    "label": "Poissons ratio det.",
+                    "type": "select",
+                    "options": ["Strain Gauge"]
+                }
+            ]
+        }
+    ]
+}

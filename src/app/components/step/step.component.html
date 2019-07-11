@@ -1,0 +1,191 @@
+<mat-expansion-panel [expanded]="expanded || !editMode" 
+                     [formGroup]="step" 
+                     (opened)="onPanelOpen()" 
+                     (afterCollapse)="onPanelClose()"
+                     [disabled]="!editMode"
+                     *ngIf="activeFields.length > 0 || editMode">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+        <div class="prefix" [class.-is-hidden]="!moveMode" *ngIf="!isType('none')">
+          <mat-icon matPrefix color="accent" (click)="toggleStep($event, step)">visibility_off</mat-icon>
+          <ng-content select="[slot=drag-handle]">
+          </ng-content>
+        </div>
+      <span>{{ prefix }}.{{ index + 1 }}</span> &nbsp; {{ title }}
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <div class="drop-list" 
+       cdkDropList 
+       (cdkDropListDropped)="drop($event)" 
+       *ngIf="editMode" 
+       [cdkDropListDisabled]="isType('none')">
+    <div cdkDrag 
+         cdkDragBoundary=".drop-list"
+         cdkDragLockAxis="y" 
+         formArrayName="fields"
+         [cdkDragDisabled]="!field.value.active"
+         *ngFor="let field of fields, let i = index">
+      <div class="field"
+           [class.-is-disabled]="!field.value.active"
+           *ngIf="field.value && editMode">
+
+        <span class="field-number">{{ i + 1 }}.</span>
+
+        <!-- Single input field -->
+        <mat-form-field appearance="outline" 
+                       class="-is-deactivatable"
+                       [formGroupName]="i"
+                       matBadge="1" 
+                       matBadgeColor="warn" 
+                       matBadgeSize="small" 
+                       [matBadgeHidden]="field.value.value || isType('none')"
+                       *ngIf="field.value.type === 'input' && (field.value.active || isType('none'))" 
+                       [class.-no-margin]="isType('none')">
+          <mat-label>{{ field.value.label }}</mat-label>
+          <input matInput
+                 formControlName="value"
+                 autocomplete="disabled"
+                 (focus)="onFocus(field)"
+                 (focusout)="onFocusOut(field)">
+          <mat-icon matPrefix *ngIf="!isType('none')" color="accent" (click)="toggleField($event, field)">visibility_off</mat-icon>
+          <mat-icon matPrefix *ngIf="!isType('none')" cdkDragHandle color="accent">drag_indicator</mat-icon>
+          <span matSuffix>{{ field.value.unit }}</span>
+        </mat-form-field>
+
+        <!-- Checkbox input field -->
+        <div class="checkbox-input -is-deactivatable" *ngIf="field.value.type === 'checkbox' && field.value.active">
+          <ng-container [formGroupName]="i">
+            <div class="prefix" *ngIf="!isType('none')">
+              <mat-icon matPrefix color="accent" (click)="toggleField($event, field)">visibility_off</mat-icon>
+              <mat-icon matPrefix cdkDragHandle color="accent">drag_indicator</mat-icon>
+            </div>
+            <mat-label>{{ field.value.label }}</mat-label>
+            <mat-checkbox matCheckbox 
+                          formControlName="checked"
+                          (change)="onCheckboxChange(field, $event)"></mat-checkbox>
+          </ng-container>
+        </div>
+    
+        <!-- Select input field -->
+        <mat-form-field appearance="outline" 
+                       class="-is-deactivatable" 
+                       [formGroupName]="i" 
+                       *ngIf="field.value.type === 'select' && field.value.active"
+                       matBadge="1" 
+                       matBadgeColor="warn" 
+                       matBadgeSize="small" 
+                       [matBadgeHidden]="field.value.value || isType('none')"
+                       [class.-no-margin]="isType('none')">
+          <mat-label>{{ field.value.label }}
+          </mat-label>
+          <mat-select matSelect 
+                      formControlName="value"
+                      (selectionChange)="onSelectionChange(field, $event)">
+            <mat-option></mat-option>
+            <mat-option *ngFor="let option of field.value.options" [value]="option">{{ option }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix *ngIf="!isType('none')" color="accent" (click)="toggleField($event, field)">visibility_off</mat-icon>
+          <mat-icon matPrefix *ngIf="!isType('none')" cdkDragHandle color="accent">drag_indicator</mat-icon>
+        </mat-form-field>
+    
+        <!-- Double input field -->
+        <div class="double-input" *ngIf="field.value.type === 'double-input' && field.value.active">
+          <mat-form-field appearance="outline" 
+                         class="-is-deactivatable" 
+                         [formGroupName]="i"
+                         [class.-no-margin]="isType('none')">
+            <mat-label>{{ field.value.label }}</mat-label>
+            <input matInput 
+                   autocomplete="disabled"
+                   formControlName="value"
+                   (focus)="onFocus(field)"
+                   (focusout)="onFocusOut(field)">
+            <mat-icon matPrefix *ngIf="!isType('none')" color="accent" (click)="toggleField($event, field)">visibility_off</mat-icon>
+            <mat-icon matPrefix *ngIf="!isType('none')" cdkDragHandle color="accent">drag_indicator</mat-icon>
+            <mat-hint *ngIf="isEn">Nominal</mat-hint>
+            <mat-hint *ngIf="isDe">SOLL</mat-hint>
+            <span matSuffix>{{ field.value.unit }}</span>
+          </mat-form-field>
+          <mat-form-field appearance="outline" 
+                         class="-is-deactivatable" 
+                         [formGroupName]="i"
+                         matBadge="1" 
+                         matBadgeColor="warn" 
+                         matBadgeSize="small" 
+                         [matBadgeHidden]="field.value.value || isType('none')">
+              <input matInput 
+                     formControlName="secondValue"
+                     autocomplete="disabled"
+                     (focus)="onFocus(field)"
+                     (focusout)="onFocusOut(field)">
+              <mat-hint *ngIf="isEn">Actual</mat-hint>
+              <mat-hint *ngIf="isDe">IST</mat-hint>
+              <span matSuffix>{{ field.value.unit }}</span>
+          </mat-form-field>
+        </div>
+
+        <div class="disabled-field" *ngIf="!field.value.active && !isType('none')">
+            <mat-icon matPrefix *ngIf="!field.value.active" color="accent" (click)="toggleField($event, field)">visibility</mat-icon>
+            <span *ngIf="isEn">Hidden: {{ field.value.label }}</span>
+            <span *ngIf="isDe">Verborgen: {{ field.value.label }}</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <ul *ngIf="!editMode && filledAndActiveFields.length > 0">
+
+    <ng-container *ngFor="let field of activeFields, let i = index">
+
+      <ng-container *ngIf="(field.value.type !== 'double-input' && field.value.type !== 'checkbox') && field.value.value">
+        <li formArrayName="fields">
+          <strong>{{ field.value.label }}</strong>
+          <span>{{ field.value.value }} {{ field.value.unit }}</span>
+        </li>
+      </ng-container>
+
+      <ng-container *ngIf="field.value.type === 'checkbox'">
+          <li formArrayName="fields">
+            <strong>{{ field.value.label }}</strong>
+            <span>
+              {{ field.value.checked ? 'Yes' : 'No' }}
+            </span>
+          </li>
+        </ng-container>
+
+      <ng-container *ngIf="field.value.type === 'double-input' && field.value.value">
+        <li formArrayName="fields">
+          <strong>{{ field.value.label }}</strong>
+          <span *ngIf="isEn">
+            Nominal: {{ field.value.value }} {{ field.value.unit }}, 
+            Actual: {{ field.value.secondValue }} {{ field.value.unit }}
+          </span>
+          <span *ngIf="isDe">
+            SOLL: {{ field.value.value }} {{ field.value.unit }}, 
+            IST: {{ field.value.secondValue }} {{ field.value.unit }}
+          </span>
+        </li>
+      </ng-container>
+
+    </ng-container>
+
+  </ul>
+
+  <h3 *ngIf="emptyFields.length > 0 && !editMode && isEn">Empty Fields:</h3>
+  <h3 *ngIf="emptyFields.length > 0 && !editMode && isDe">Leere Felder:</h3>
+
+  <ng-container *ngFor="let field of emptyFields, let i = index">
+    <span *ngIf="!editMode">{{ field.value.label }}</span>
+    <span *ngIf="emptyFields.length > 1 && i !== emptyFields.length - 1 && !editMode">, &nbsp;</span>
+  </ng-container>
+
+</mat-expansion-panel>
+
+<span *ngIf="activeFields.length === 0 && !editMode && isEn"><i>Step {{ title }} skipped</i></span>
+<span *ngIf="activeFields.length === 0 && !editMode && isDe"><i>Schritt {{ title }} übersprungen</i></span>

@@ -1,0 +1,29 @@
+.menu-trigger {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+.mat-nav-list {
+    margin: -20px;
+}
+
+.mat-list-icon {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.mat-list-item {
+    p {
+        font-size: 12px !important;
+        line-height: 16px !important;
+    }
+    h4 {
+        font-weight: 500 !important;
+    }
+}
+
+.empty-state {
+    text-align: center;
+    margin-top: 20%;
+    color: #bbb;
+}

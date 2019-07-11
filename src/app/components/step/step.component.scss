@@ -1,0 +1,83 @@
+@import '../../../styles.scss';
+
+/*mat-checkbox {
+    top: -6px;
+    left: -20px;
+    position: relative;
+    background: #fff;
+    border: 2px solid #fff;
+}*/
+
+:host > span {
+    color: #999;
+}
+
+.field {
+    max-height: 78px;
+    transition: max-height 0.2s;
+    display: flex;
+    align-items: baseline;
+
+    &.-is-disabled {
+        //max-height: 0 !important;
+        //overflow: hidden;
+    }
+}
+
+.checkbox-input {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -4px;
+    background: #fff;
+    user-select: none;
+
+    .mat-icon {
+        border-radius: 30%;
+        padding: 4px 3px 4px 6px;
+        display: flex !important;
+        align-items: center;
+        background-color: #f0f0f0;
+        transition: 0.2s transform;
+        font-size: 150%;
+
+        &:first-of-type {
+            cursor: pointer;
+            margin-right: 7px;
+        }
+
+        &:last-of-type {
+            cursor: ns-resize;
+            background: none;
+            transform: none;
+        }
+
+        &:hover {
+            transform: scale(1);
+        }
+
+        &:focus {
+            background: #e9e9e9;
+        }
+    }
+
+    mat-label {
+        margin: 0 20px;
+    }
+
+    .prefix {
+        display: flex;
+        position: relative;
+    }
+}
+
+.field-number {
+    margin-right: 20px;
+    color: $primary;
+}
+
+.-is-disabled .field-number {
+    position: relative;
+    top: -7px;
+}
